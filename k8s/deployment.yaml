@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
       - name: hello-app
-        image: fabsakae/hello-app:c1fbc5838ce7a940d7f57cd7a4912199a37f2498
+        image: fabsakae/hello-app:8bf9cb719475ed032fa265454247a3dc0a3dbec8
