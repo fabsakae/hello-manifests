@@ -1,0 +1,10 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-app
+spec:
+  template:
+    spec:
+      containers:
+      - name: hello-app
+        image: fabsakae/hello-app:c1fbc5838ce7a940d7f57cd7a4912199a37f2498
