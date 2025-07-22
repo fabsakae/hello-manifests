@@ -1,21 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-app-deployment # Nome do seu Deployment
-  labels:
-    app: hello-app
+  name: hello-app
 spec:
-  replicas: 1 # Quantos pods da aplicação você quer rodando
-  selector:
-    matchLabels:
-      app: hello-app
   template:
-    metadata:
-      labels:
-        app: hello-app
     spec:
       containers:
-      - name: hello-app-container # Nome do seu container
-        image: fabsakae/hello-app:latest # Use a tag 'latest' ou github.sha para a imagem
-        ports:
-        - containerPort: 8000 # A porta que sua aplicação FastAPI expõe (definida no Dockerfile)
+      - name: hello-app
+        image: fabsakae/hello-app:db41d898371c709dba09125dec6b43e30f7f5ce0
