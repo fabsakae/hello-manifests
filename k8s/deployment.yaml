@@ -1,10 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-app
+  name: hello-app-deployment
+  labels:
+    app: hello-app
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-app
   template:
+    metadata:
+      labels:
+        app: hello-app
     spec:
       containers:
-      - name: hello-app
-        image: fabsakae/hello-app:db41d898371c709dba09125dec6b43e30f7f5ce0
+      - name: hello-app-container
+        image: fabsakae/hello-app:db41d898371c709dba09125dec6b43e30f7f5ce0 
+        ports:
+        - containerPort: 8000
