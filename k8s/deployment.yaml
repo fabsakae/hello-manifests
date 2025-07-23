@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hello-app-container
-        image: fabsakae/hello-app:4a20c9f0747738ee96af0401130100b34ac66dd5
+        image: fabsakae/hello-app:6b0bb5ddcc2433d245e653f3ad697d44643d3c5f
         ports:
         - containerPort: 8000
